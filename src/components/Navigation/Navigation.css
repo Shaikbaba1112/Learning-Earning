@@ -68,6 +68,12 @@ nav ul li a:hover {
   background: rgba(255, 255, 255, 0.1);
 }
 
+nav ul li.active a {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.2);
+  font-weight: 700;
+}
+
 nav ul li a:hover::after {
   width: calc(100% - 32px);
 }
