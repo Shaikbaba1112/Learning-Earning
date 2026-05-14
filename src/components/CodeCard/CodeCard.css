@@ -1,0 +1,215 @@
+.code-card {
+  padding: 28px;
+  margin: 20px 0;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%);
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.12);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-left: 5px solid #667eea;
+  position: relative;
+  overflow: hidden;
+}
+
+.code-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #667eea, transparent);
+}
+
+.code-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(102, 126, 234, 0.2);
+  border-left-color: #764ba2;
+}
+
+.code-card h2 {
+  margin: 0 0 16px 0;
+  font-size: 1.4rem;
+  color: #2c3e50;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+}
+
+.code-card p {
+  margin: 12px 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 1rem;
+  color: #34495e;
+  line-height: 1.6;
+}
+
+.answer-block {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);
+  padding: 16px 18px;
+  border-radius: 10px;
+  border-left: 4px solid #667eea;
+  margin-bottom: 15px;
+  border-top: 1px solid rgba(102, 126, 234, 0.1);
+}
+
+.answer-block strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #667eea;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.answer-block p {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.code-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.code-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.code-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(102, 126, 234, 0.4);
+}
+
+.code-btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.code-btn:active {
+  transform: translateY(0);
+}
+
+.code-block {
+  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  padding: 18px;
+  border-radius: 10px;
+  overflow-x: auto;
+  font-family: 'Courier New', 'Monaco', monospace;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  border: 1px solid rgba(102, 126, 234, 0.2);
+  margin-top: 12px;
+  color: #e2e8f0;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.code-block::-webkit-scrollbar {
+  height: 6px;
+}
+
+.code-block::-webkit-scrollbar-track {
+  background: rgba(102, 126, 234, 0.1);
+  border-radius: 10px;
+}
+
+.code-block::-webkit-scrollbar-thumb {
+  background: rgba(102, 126, 234, 0.3);
+  border-radius: 10px;
+}
+
+.code-block::-webkit-scrollbar-thumb:hover {
+  background: rgba(102, 126, 234, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .code-card {
+    padding: 22px;
+    margin: 15px 0;
+    border-radius: 12px;
+  }
+
+  .code-card h2 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+  }
+
+  .code-card p {
+    font-size: 0.95rem;
+  }
+
+  .answer-block {
+    padding: 14px 16px;
+  }
+
+  .code-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .code-block {
+    font-size: 0.8rem;
+    padding: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .code-card {
+    padding: 16px;
+    margin: 12px 0;
+    border-radius: 10px;
+    border-left-width: 4px;
+  }
+
+  .code-card h2 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+
+  .code-card p {
+    font-size: 0.9rem;
+    gap: 8px;
+  }
+
+  .answer-block {
+    padding: 12px 14px;
+    margin-bottom: 12px;
+  }
+
+  .answer-block strong {
+    font-size: 0.9rem;
+  }
+
+  .code-btn {
+    padding: 10px 18px;
+    font-size: 0.85rem;
+    width: 100%;
+  }
+
+  .code-block {
+    font-size: 0.75rem;
+    padding: 12px;
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,161 @@
+.part {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 400px;
+  width: 400px;
+  padding: 24px;
+  margin: 20px;
+  background: linear-gradient(180deg, #111827 0%, #1f2937 100%);
+  color: rgba(255, 255, 255, 0.95);
+  border-radius: 24px;
+  box-shadow: 0 24px 48px rgba(15, 23, 42, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.part:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 32px 64px rgba(15, 23, 42, 0.3);
+}
+
+/* HTML Part - Orange/Red Accent */
+.part:nth-child(1) {
+  border-top: 3px solid #ff6b6b;
+}
+
+.part:nth-child(1):hover {
+  box-shadow: 0 32px 64px rgba(255, 107, 107, 0.2);
+}
+
+/* CSS Part - Teal Accent */
+.part:nth-child(2) {
+  border-top: 3px solid #4ecdc4;
+}
+
+.part:nth-child(2):hover {
+  box-shadow: 0 32px 64px rgba(78, 205, 196, 0.2);
+}
+
+/* JavaScript Part - Yellow Accent */
+.part:nth-child(3) {
+  border-top: 3px solid #ffd93d;
+}
+
+.part:nth-child(3):hover {
+  box-shadow: 0 32px 64px rgba(255, 217, 61, 0.2);
+}
+
+/* React Part - Cyan Accent */
+.part:nth-child(4) {
+  border-top: 3px solid #61dafb;
+}
+
+.part:nth-child(4):hover {
+  box-shadow: 0 32px 64px rgba(97, 218, 251, 0.2);
+}
+
+.card-heading {
+  color: #f3f4f6;
+  text-align: center;
+  margin-bottom: 16px;
+  font-size: 1.8rem;
+  letter-spacing: 0.03em;
+  font-weight: 600;
+}
+
+.card-btn {
+  align-self: center;
+  margin-top: 20px;
+  padding: 14px 28px;
+  min-width: 160px;
+  background-color: rgba(255, 255, 255, 0.92);
+  color: #111827;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.12);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.card-btn:hover {
+  background-color: #40df34;
+  transform: translateY(-2px);
+  box-shadow: 0 16px 28px rgba(15, 23, 42, 0.18);
+}
+
+.card-btn:active {
+  transform: translateY(0);
+}
+
+.concept-list {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.concept-list li {
+  margin-bottom: 12px;
+  transition: color 0.2s ease;
+}
+
+.concept-list li:hover {
+  color: #40df34;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .part {
+    height: 380px;
+    width: 350px;
+    margin: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .part {
+    height: 360px;
+    width: 300px;
+    margin: 10px;
+    padding: 20px;
+  }
+
+  .card-heading {
+    font-size: 1.5rem;
+  }
+
+  .concept-list {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .part {
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+    margin: 15px 0;
+    padding: 20px;
+  }
+
+  .card-heading {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+  }
+
+  .concept-list {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .card-btn {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+    min-width: 140px;
+    margin-top: 15px;
+  }
+}
