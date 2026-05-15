@@ -6,7 +6,9 @@ export default function Navigation({ currentPage, onNavigate }) {
     { label: 'Home', page: 'home' },
     { label: 'About', page: 'about' },
     { label: 'Questions', page: 'questions' },
-    { label: 'Contact', page: 'contact' }
+    { label: 'Contact', page: 'contact' },
+    { label: 'Tutorials', page: 'tutorials' },
+    { label: 'Exercises', page: 'exercises' }
   ];
 
   return (
